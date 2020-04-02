@@ -13,8 +13,10 @@ FragmentManager) :
     override fun getItem(position: Int): Fragment {
         return if (position == 0) {
             Fragment_first.newInstance()
-        } else {
+        } else if(position==1) {
             Fragment_second.newInstance()
+        } else{
+           Fragment_third.newInstance()
         }
     }
 
@@ -23,14 +25,14 @@ FragmentManager) :
     }
 
     override fun getCount(): Int {
-        return 2
+        return 3
     }
 
     companion object {
         @StringRes
         private val TAB_TITLES = intArrayOf(
             R.string.tab_text_1,
-            R.string.tab_text_2
+            R.string.tab_text_2,R.string.tab_text_3
         )
     }
 }

@@ -1,0 +1,2 @@
+rootProject.name='tugasdb'
+include ':app'
